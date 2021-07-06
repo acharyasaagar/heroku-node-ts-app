@@ -17,4 +17,8 @@ app.get('/healthcheck', (req, res) => {
   res.send('ok')
 })
 
+app.get('/timestamp', (req, res) => {
+  res.send(new Date().toISOString())
+})
+
 app.listen(PORT, () => console.log('Server is listening at port', PORT))
