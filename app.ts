@@ -13,4 +13,8 @@ app.get('/version', (req, res) => {
   res.send(packageJson.version)
 })
 
+app.get('/healthcheck', (req, res) => {
+  res.send('ok')
+})
+
 app.listen(PORT, () => console.log('Server is listening at port', PORT))
